@@ -55,6 +55,10 @@ grey	- #ECF0F0
 	left: 0; 
 	width:100%; 
 	height: 1000px; 
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
 	background-color: #ECF0F0; 
 	z-index: 1; 
 	margin: 0; 
@@ -105,9 +109,10 @@ h1 {font-size: 20px;
 	margin: 0 auto;
 	position: absolute;
 	top: 240px;
+	line-height: -200px;
 	}
 	
-	#face1, #face2, #face3, #face4{
+	#face1, #face2, #face3, #face4, #face6{
 	width: 1200px;
 	height: 800px;
 	display: none;
@@ -214,3 +219,8 @@ background-color: #e64842;
 color: white;
 padding: 13px 17px;
 }
+
+.active {
+	background-color: #e64842;
+	color: white;}
+

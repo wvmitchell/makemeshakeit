@@ -67,17 +67,17 @@ if (hasGetUserMedia()) {
 
 
 function slide_faces () {
-	setTimeout("slide_face_six()", 3000);
-	setTimeout("slide_face_six()", 4500);
-	setTimeout("slide_face_one()", 5300);
-	setTimeout("slide_face_one()", 6500); 
-	setTimeout("slide_face_two()", 8300);
-	setTimeout("slide_face_two()", 9500);
-	setTimeout("slide_face_three()", 11300);
-	setTimeout("slide_face_three()", 12500);
-	setTimeout("slide_face_four()", 14300);
-	setTimeout("slide_face_four()", 15500);
-	setTimeout("new_nav()", 17500);
+	setTimeout("slide_face_six()", 2800);
+	setTimeout("slide_face_six()", 4400);
+	setTimeout("slide_face_one()", 5800);
+	setTimeout("slide_face_one()", 7400); 
+	setTimeout("slide_face_two()", 8800);
+	setTimeout("slide_face_two()", 10400);
+	setTimeout("slide_face_three()", 11800);
+	setTimeout("slide_face_three()", 13200);
+	setTimeout("slide_face_four()", 14800);
+	setTimeout("slide_face_four()", 16200);
+	setTimeout("new_nav()", 17200);
 };
 
 function slide_face_one () {
@@ -105,11 +105,11 @@ function new_nav() {
 };
 
 var actions = [		
-	"Stretch!","Reverse!","Step!","Spin!",
-	"Turn!","Grab!","Popup!","Twist!",
-	"Hands!","Shake!","Drum!","Fly!",
-	"Cry!","Kick!","Twirl!","Swim!",
-	"Pull!","Push!", "Jump!", "Faster!",
+	"Stretch!","Reverse!","Lunge!","Spin!",
+	"Attack!","Shake!","Twist!",
+	"Break!","Maracas!","Drum!","Chicken!",
+	"Weep?","Kick!","Crash!","Swim It!",
+	"Crank!","Shove!", "Jump!", "Faster!",
 	"Vibrate!"];
 
 var count = 0;
@@ -146,10 +146,53 @@ $("#button").click(function(){
 
 function playSong(){
 	R.ready(function() {
-	  R.player.play({source: "a123273", initialPosition: 20}); // Radiohead, The Bends
+	  R.player.play({source: "t25005149", initialPosition: 33}); // Radiohead, The Bends
 	  
 	});
 }
 
+function pleaseWork() {
+  var tester = document.getElementsByClassName('slow');
+  var tester_fast = document.getElementsByClassName('fast');
+  if (tester.length > 2) {
+    for (i=0; i<9; i++) {
+      document.getElementById("slow0").playbackRate = 1.0;
+        document.getElementById("slow0").setAttribute("id", "my-video" + i);
+        tester.item(0).setAttribute("id", "slow0");
+        tester.item(0).setAttribute("class", "my-video");
+    };
+  };
+  if (tester_fast.length > 2) {
+    for (i=0; i<9; i++) {
+      document.getElementById("fast0").playbackRate = 1.0;
+        document.getElementById("fast0").setAttribute("id", "my-video" + i);
+        tester_fast.item(0).setAttribute("id", "fast0");
+        tester_fast.item(0).setAttribute("class", "my-video");
+    };
+  };
+  
+};   
+
+function slowMusic () { 
+var elements = document.getElementsByClassName('my-video');
+for (i=0; i<=9; i++) {
+  
+   document.getElementById("my-video0").playbackRate = 0.3;
+   document.getElementById("my-video0").setAttribute("id", "slow" + i);
+   elements.item(0).setAttribute("id", "my-video0");
+   elements.item(0).setAttribute("class", "slow");
+  };
+};
+
+function fastMusic () { 
+var elements = document.getElementsByClassName('my-video');
+for (i=0; i<=9; i++) {
+   
+   document.getElementById("my-video0").playbackRate = 2.0;
+   document.getElementById("my-video0").setAttribute("id", "fast" + i);
+   elements.item(0).setAttribute("id", "my-video0");
+   elements.item(0).setAttribute("class", "fast");
+  };
+};	
 
 

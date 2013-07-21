@@ -17,8 +17,9 @@
 </div>
 
 
+
 <div id="grid">
-    <video width="33%" height="320px" autoplay="autoplay" id="my-video" muted loop>
+    <video width="33%" height="320px" autoplay="autoplay" id="my-video0" muted loop>
          <source src="/assets/movie1.mp4" type="video/mp4" hidden="true">
     </video>
     <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video1" muted loop>
@@ -56,29 +57,11 @@ function pleaseWork() {
 };
 };
 */
-   
-function slowMusic () {	
-var elements = document.getElementsByClassName('my-video');
-for (i=0; i<=9; i++) {
-   document.getElementById("my-video").play();
-   document.getElementById("my-video").playbackRate = 0.3;
-   document.getElementById("my-video").setAttribute("id", "slow" + i);
-   elements.item(0).setAttribute("id", "my-video");
-   elements.item(0).setAttribute("class", "slow");
-	};
-};
+$(".button").click(function () {
+         $(".active").removeClass("active");   
+         $(this).toggleClass("active");
+       });
 
-function fastMusic () {	
-var elements = document.getElementsByClassName('my-video');
-for (i=0; i<=9; i++) {
-   document.getElementById("my-video").play();
-   document.getElementById("my-video").playbackRate = 2.6;
-   document.getElementById("my-video").setAttribute("id", "fast" + i);
-   elements.item(0).setAttribute("id", "my-video");
-   elements.item(0).setAttribute("class", "fast");
-	};
-};
-	
 
 
 </script>
