@@ -1,4 +1,10 @@
 Makemeshakeit::Application.routes.draw do
+  
+  root to: "main#index"
+  
+  match 'main/video' => 'main#video', :as => 'video'
+  match 'main/grid' => 'main#grid', :as => 'grid' 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

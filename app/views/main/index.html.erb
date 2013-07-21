@@ -1,0 +1,49 @@
+<div id="main">
+    <div id="logo">
+    	<a>
+        	<img src="/assets/logo.png" onmouseover="this.src='/assets/logohover.png'" onmouseout="this.src='/assets/logo.png'" onClick="toggleTime()">
+        </a>
+	</div>
+    <div id="num3" class="hidden"><%= image_tag '3.png' %></div>
+    <div id="num2" class="hidden"><%= image_tag '2.png' %></div>
+    <div id="num1" class="hidden"><%= image_tag '1.png' %></div> 
+</div>
+<div id="bigred"></div>
+<div id="bigred_really" style="display: none"></div>
+<div id="bigyellow" style="display: none"></div>
+<div id="biggreen" style="display: none"></div>
+
+<script>
+function toggleTime() {
+	setTimeout("logoHide()", 0);
+	setTimeout("numberThree()", 0);
+	setTimeout("numberThree()", 1210);
+	setTimeout("numberTwo()", 1210);
+	setTimeout("numberTwo()", 3120);
+	setTimeout("numberOne()", 3120);
+	setTimeout("linkOut()", 4919)
+};
+
+function logoHide(){
+	$("#logo").toggle();
+};
+
+function numberThree(){
+	$("#bigred_really").toggle();
+	$("#num3").toggle();
+};
+
+function numberTwo(){
+	$("#bigyellow").toggle();
+	$("#num2").toggle();
+};
+
+function numberOne(){
+	$("#biggreen").toggle();
+	$("#num1").toggle();
+};
+
+function linkOut() {
+	location.replace("/main/video")
+};
+</script>

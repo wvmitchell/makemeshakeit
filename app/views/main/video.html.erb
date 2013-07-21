@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+<body onLoad="slide_faces(); changeText(); playSong();">	
+
+<div id="background"></div>
+<div id="vid_cam">
+    <video width="666px" autoplay="autoplay" muted>
+             <!--<source src="../the_grid/movies/movie1.mp4" type="video/mp4" hidden="true"> -->
+    </video>
+</div>
+
+<div id="face1"><%= image_tag "Face_01.png" %></div>
+<div id="face2"><%= image_tag "Face_02.png" %></div>
+<div id="face3"><%= image_tag "Face_03.png" %></div>
+<div id="face4"><%= image_tag "Face_04.png" %></div>
+
+<h1 id="word" style=""></h1>
+<div id="new_nav"><a href="/main/grid"><img id="grid_btn" src="/assets/grid.png" onmouseover="this.src='/assets/grid_hover.png'" onmouseout="this.src='/assets/grid.png'" /></a>
+<a><img src="/assets/replay.png" onmouseover="this.src='/assets/replay_hover.png'" onmouseout="this.src='/assets/replay.png'" /></a>
+</div>
+

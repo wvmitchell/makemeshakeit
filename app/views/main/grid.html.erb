@@ -1,0 +1,84 @@
+
+
+	<div id="header">
+		<a href="/">
+        	<img src="/assets/logowhite.png" onmouseover="this.src='/assets/logohover.png'" 
+            onmouseout="this.src='/assets/logowhite.png'" id="logo">
+       </a>
+	
+    <div id="buttons">
+		
+       <a href="#" class="button" id="slowJam" onClick="slowMusic()" >Slower Jam</a>
+       <a href="#" class="button" id="fastJam" onClick="fastMusic()">Speed Dat Up</a>
+       <a href="#" class="button" id="makeRain" onClick="pleaseWork()">Normalize</a>
+       
+    </div>
+    
+</div>
+
+
+<div id="grid">
+    <video width="33%" height="320px" autoplay="autoplay" id="my-video" muted loop>
+         <source src="/assets/movie1.mp4" type="video/mp4" hidden="true">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video1" muted loop>
+         <source src="/assets/movie2.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video2" muted loop>
+         <source src="/assets/movie3.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video3" muted loop>
+         <source src="/assets/movie4.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video4" muted loop>
+         <source src="/assets/movie5.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video5" muted loop>
+         <source src="/assets/movie6.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay"class="my-video" id="my-video6" muted loop>
+         <source src="/assets/movie7.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video7" muted loop>
+         <source src="/assets/movie8.mp4" type="video/mp4">
+    </video>
+    <video width="33%" height="320px" autoplay="autoplay" class="my-video"  id="my-video8" muted loop>
+         <source src="/assets/movie9.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script type="text/javascript">
+/*  
+function pleaseWork() {
+	var tester = document.getElementsByClassName('slow');
+	if (tester.length > 2) {
+	alert(tester.length + "is greater than two");
+};
+};
+*/
+   
+function slowMusic () {	
+var elements = document.getElementsByClassName('my-video');
+for (i=0; i<=9; i++) {
+   document.getElementById("my-video").play();
+   document.getElementById("my-video").playbackRate = 0.3;
+   document.getElementById("my-video").setAttribute("id", "slow" + i);
+   elements.item(0).setAttribute("id", "my-video");
+   elements.item(0).setAttribute("class", "slow");
+	};
+};
+
+function fastMusic () {	
+var elements = document.getElementsByClassName('my-video');
+for (i=0; i<=9; i++) {
+   document.getElementById("my-video").play();
+   document.getElementById("my-video").playbackRate = 2.6;
+   document.getElementById("my-video").setAttribute("id", "fast" + i);
+   elements.item(0).setAttribute("id", "my-video");
+   elements.item(0).setAttribute("class", "fast");
+	};
+};
+	
+
+
+</script>
