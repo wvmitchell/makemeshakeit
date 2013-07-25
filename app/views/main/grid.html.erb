@@ -1,26 +1,41 @@
 
-
+    
 	<div id="header">
 		<a href="/">
         	<img src="/assets/logowhite.png" onmouseover="this.src='/assets/logohover.png'" 
             onmouseout="this.src='/assets/logowhite.png'" id="logo">
        </a>
-	
-    <div id="buttons">
-		
-       <a href="#" class="button" id="slowJam" onClick="slowMusic()" >Slower Jam</a>
-       <a href="#" class="button" id="fastJam" onClick="fastMusic()">Speed Dat Up</a>
-       <a href="#" class="button" id="makeRain" onClick="pleaseWork()">Normalize</a>
+	   
        
+
+        <div id="buttons">
+           <a href="#" class="button" id="slowJam" onClick="makeSong();" >Slower Jam</a>
+           <a href="#" class="button" id="fastJam" onClick="fastUp()">Speed Dat Up</a>
+           <a href="#" class="button" id="makeRain" onClick="normalTime()">Normalize</a>
+           
+        </div>
+        
+        <audio controls hidden id="slowJamSong">
+            <source src="/assets/get_it.mp3" type="audio/mpeg" >
+                Your browser does not support this audio format.
+            </audio>
+
+        <audio controls hidden id="thirsty">
+            <source src="/assets/fast_song.mp3" type="audio/mpeg" >
+                Your browser does not support this audio format.
+            </audio>
+
+            <audio controls hidden id="normalSpeed">
+            <source src="/assets/normal_speed.mp3" type="audio/mpeg" >
+                Your browser does not support this audio format.
+            </audio>
     </div>
-    
-</div>
 
 
 
 <div id="grid">
     <video width="33%" height="320px" autoplay="autoplay" id="my-video0" muted loop>
-         <source src="/assets/movie1.mp4" type="video/mp4" hidden="true">
+          <source src="/assets/movie1.mp4" type="video/mp4" hidden="true">
     </video>
     <video width="33%" height="320px" autoplay="autoplay" class="my-video" id="my-video1" muted loop>
          <source src="/assets/movie2.mp4" type="video/mp4">

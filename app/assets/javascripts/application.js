@@ -144,13 +144,6 @@ $("#button").click(function(){
 	changeText();
 });
 
-function playSong(){
-	R.ready(function() {
-	  R.player.play({source: "t25005149", initialPosition: 33}); // Radiohead, The Bends
-	  
-	});
-}
-
 function pleaseWork() {
   var tester = document.getElementsByClassName('slow');
   var tester_fast = document.getElementsByClassName('fast');
@@ -177,12 +170,13 @@ function slowMusic () {
 var elements = document.getElementsByClassName('my-video');
 for (i=0; i<=9; i++) {
   
-   document.getElementById("my-video0").playbackRate = 0.3;
+   document.getElementById("my-video0").playbackRate = 0.4;
    document.getElementById("my-video0").setAttribute("id", "slow" + i);
    elements.item(0).setAttribute("id", "my-video0");
    elements.item(0).setAttribute("class", "slow");
   };
 };
+
 
 function fastMusic () { 
 var elements = document.getElementsByClassName('my-video');
@@ -195,4 +189,30 @@ for (i=0; i<=9; i++) {
   };
 };	
 
+function normalTime () {
+	document.getElementById("slowJamSong").pause();
+	document.getElementById("thirsty").pause();
+	document.getElementById("normalSpeed").play();
+	pleaseWork();
+};
 
+
+function makeSong () {
+	document.getElementById("normalSpeed").pause();
+	document.getElementById("thirsty").pause();
+	document.getElementById("slowJamSong").play();
+	slowMusic();
+};
+
+function fastUp () {
+	document.getElementById("normalSpeed").pause();
+	document.getElementById("slowJamSong").pause();
+	document.getElementById("thirsty").play();
+	fastMusic();
+};
+
+function playSong(){
+	R.ready(function() {
+	  R.player.play({source: "t25005149", initialPosition: 33}) // Radiohead, The Bends
+	});
+};
